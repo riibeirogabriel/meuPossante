@@ -53,6 +53,7 @@ def create_user():
         TIME_FORMAT)
 
     document = {
+        "has_whatsapp": request.json["has_whatsapp"],
         "password": password,
         "email": request.json["email"],
         "name": request.json["name"],
