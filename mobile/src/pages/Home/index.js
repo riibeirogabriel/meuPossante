@@ -1,37 +1,46 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import * as Styles from './styles';
 
 import Image from '../../assets/svg/HomeImage';
-import Search from '../../assets/svg/icons/Search';
-import SellCar from '../../assets/svg/icons/SellCar';
-import MyAdverts from '../../assets/svg/icons/MyAdverts';
+import Search from '../../assets/icons/Search';
+import SellCar from '../../assets/icons/SellCar';
+import MyAdverts from '../../assets/icons/MyAdverts';
 
-export default () => (
-    <Styles.Container>
-        <Image />
-        <Styles.Text>O que você quer fazer?</Styles.Text>
+export default () => {
+    const navigation = useNavigation();
 
-        <Styles.ScrollHorizontal horizontal showsHorizontalScrollIndicator={false}>
+    const handleBuy = () => navigation.navigate('Search');
+    const handleSell = () => navigation.navigate('CreateAdvert');
+    const handleMyAdverts = () => navigation.navigate('SignIn');
 
-            <Styles.CardsContainer>
-                <Styles.Card>
-                    <Search />
-                    <Styles.CardText>Quero comprar</Styles.CardText>
-                </Styles.Card>
+    return (
+        <Styles.Container>
+            <Image />
+            <Styles.Text>O que você quer fazer?</Styles.Text>
 
-                <Styles.Card>
-                    <SellCar />
-                    <Styles.CardText>Quero vender</Styles.CardText>
-                </Styles.Card>
+            <Styles.ScrollHorizontal horizontal showsHorizontalScrollIndicator={false}>
 
-                <Styles.Card>
-                    <MyAdverts />
-                    <Styles.CardText>Meus anúncios</Styles.CardText>
-                </Styles.Card>
-            </Styles.CardsContainer>
+                <Styles.CardsContainer>
+                    <Styles.Card onPress={handleBuy}>
+                        <Search />
+                        <Styles.CardText>Quero comprar</Styles.CardText>
+                    </Styles.Card>
 
-        </Styles.ScrollHorizontal>
+                    <Styles.Card onPress={handleSell}>
+                        <SellCar />
+                        <Styles.CardText>Quero vender</Styles.CardText>
+                    </Styles.Card>
 
-    </Styles.Container>
-);
+                    <Styles.Card onPress={handleMyAdverts}>
+                        <MyAdverts />
+                        <Styles.CardText>Meus anúncios</Styles.CardText>
+                    </Styles.Card>
+                </Styles.CardsContainer>
+
+            </Styles.ScrollHorizontal>
+
+        </Styles.Container>
+    );
+};

@@ -9,12 +9,17 @@
   },
   "dependencies": {
     "@expo-google-fonts/poppins": "^0.1.0",
+    "@react-native-community/checkbox": "^0.5.5",
     "@react-native-community/masked-view": "0.1.10",
+    "@react-native-picker/picker": "^1.9.2",
     "@react-navigation/native": "^5.8.2",
     "@react-navigation/stack": "^5.11.1",
+    "axios": "^0.21.0",
     "expo": "~39.0.2",
+    "expo-cli": "^3.28.2",
     "expo-font": "~8.3.0",
     "expo-status-bar": "~1.0.2",
+    "global": "^4.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
@@ -25,6 +30,8 @@
     "react-native-screens": "~2.10.1",
     "react-native-svg": "12.1.0",
     "react-native-web": "~0.13.12",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

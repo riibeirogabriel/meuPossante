@@ -1,10 +1,11 @@
 import normalize from 'react-native-normalize';
 
-export const Theme = {
+export const theme = {
     colors: {
         background: '#F5F5F5',
         primary: '#F3123C',
         white: '#FFFFFF',
+        transparent: '#FFFFFF00',
         black: '#404040',
         gray: '#B4B4B4',
         darkGray: '#808080',

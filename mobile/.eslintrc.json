@@ -23,7 +23,7 @@
         "import/prefer-default-export": "off",
         "no-unused-expressions": ["error", { "allowTaggedTemplates": true}],
         "no-nested-ternary": "off",
-        "linebreak-style": ["error", "windows"],
+        "linebreak-style": "off",
         "indent": ["error", 4],
         "no-underscore-dangle": "off",
         "react/jsx-indent": ["error", 4],
